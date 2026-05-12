@@ -1,0 +1,19 @@
+{
+  "name": "festival-de-musica",
+  "version": "1.0.0",
+  "description": "Practice SASS",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/scss:dist/css"
+  },
+  "keywords": [
+    "SASS",
+    "NPM",
+    "GULP"
+  ],
+  "author": "Carlos romano@Romanocode",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.99.0"
+  }
+}
