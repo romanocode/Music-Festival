@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Practice SASS",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "sass": "sass --watch  src/img/scss:build/css"
+    "sass": "sass --watch  src/img/scss:build/css",
+    "hola": "gulp hola"
   },
   "keywords": [
     "SASS",
@@ -15,5 +17,8 @@
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.99.0"
+  },
+  "dependencies": {
+    "gulp": "^5.0.1"
   }
 }
