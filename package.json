@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "sass": "sass --watch  src/img/scss:build/css",
-    "hola": "gulp hola"
+    "dev": "gulp dev"
   },
   "keywords": [
     "SASS",
@@ -16,6 +16,7 @@
   "author": "Carlos romano@Romanocode",
   "license": "ISC",
   "devDependencies": {
+    "gulp-sass": "^6.0.1",
     "sass": "^1.99.0"
   },
   "dependencies": {
