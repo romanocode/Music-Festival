@@ -6,13 +6,13 @@ const sass = gulpSass(dartSass);
 
 export function css(done) {
     src('src/img/scss/app.scss')
-        .pipe( sass() )
+        .pipe( sass().on('error', sass.logError) )
         .pipe( dest('build/css') )
 
     done()
 }
 
 export function dev(done) {
-    watch('src/img/scss/app.scss', css);
+    watch('src/img/scss/**/*.scss', css);
     done();
 }
