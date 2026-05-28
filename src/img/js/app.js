@@ -2,12 +2,20 @@ document.addEventListener('DOMContentLoaded', function(){
     navegacionFija()
     crearGaleria()
     resaltarEnlace()
-    ScrollNav()
+    scrollNav()
 })
 
 function navegacionFija(){
     const header = document.querySelector('.header')
     const sobreFestival = document.querySelector('.sobre-festival')
+    
+    document.addEventListener('scroll', function(){
+        if(window.scrollY > sobreFestival.offsetTop){
+            header.classList.add('fixed')
+        } else {
+            header.classList.remove('fixed')
+        }
+    })
 }
 
 function crearGaleria(){
@@ -97,5 +105,15 @@ function resaltarEnlace(){
 }
 
 function scrollNav() {
-    
+    const navLinks = document.querySelectorAll('.navegacion-principal a')
+
+    navLinks.forEach( link => {
+        link.addEventListener('click', e =>{
+            e.preventDefault()
+            const sectionScroll = e.target.getAttribute('href')
+            const section = document.querySelector(sectionScroll)
+
+            section.scrollIntoView({behavior: 'smooth'})
+        })
+    })
 }
